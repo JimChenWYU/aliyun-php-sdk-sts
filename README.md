@@ -11,7 +11,7 @@ fork by [here](https://github.com/aliyun/aliyun-openapi-php-sdk/tree/master/aliy
 ## Installing
 
 ```shell
-$ composer require jimchen/aliyun-php-sdk-sts -vvv
+$ composer require jimchen/aliyun-php-sdk-sts:~1.0
 ```
 
 ## License
