@@ -17,8 +17,8 @@ class LaravelProvider extends ServiceProvider
                 config('aliyun.sts.debug', false),
                 config('aliyun.sts.connection_timeout', 20),
                 config('aliyun.sts.timeout', 20),
-                config('aliyun.sts.cert', []),
-                config('aliyun.sts.options', [])
+                config('aliyun.sts.cert'),
+                config('aliyun.sts.options')
             );
         });
     }
@@ -27,7 +27,7 @@ class LaravelProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                dirname(__DIR__) . '/config/aliyun.php' => config_path('aliyun.php')
+                \dirname(__DIR__) . '/config/aliyun.php' => config_path('aliyun.php'),
             ], 'config');
         }
     }
